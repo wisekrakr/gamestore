@@ -23,6 +23,7 @@ public class Game {
     @Column(name = "image_url")
     private String imageUrl;
     private boolean active;
+    private boolean finished;
     private BigDecimal price;
     @Column(name = "date_created")
     private Date createdOn;
