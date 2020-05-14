@@ -16,5 +16,8 @@ public interface GameRepository extends JpaRepository<Game, Long> {
     @RestResource(path = "category-id")
     Page<Game> findByCategoryId(@Param("id") Long id, Pageable pageable);
 
+    @RestResource(path = "searchbykeyword")
+    Page<Game> findByNameContaining(@Param("name") String keyword, Pageable pageable);
+
 }
 
